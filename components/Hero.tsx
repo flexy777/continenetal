@@ -6,7 +6,7 @@ export default function Hero({ onJoinPartner }: { onJoinPartner: () => void }) {
   return (
     <section
       id="home"
-      className="hero-bg relative overflow-hidden pt-28 md:pt-32 pb-16 md:pb-24"
+      className="hero-bg relative overflow-hidden pt-32 md:pt-40 pb-16 md:pb-24"
     >
       <div className="solar-glow" style={{ top: "-100px", right: "-100px" }} />
       <div className="solar-glow" style={{ bottom: "-200px", left: "-150px" }} />

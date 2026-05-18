@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { SITE, NAV } from "@/lib/site";
 
 export default function Footer() {
@@ -7,9 +8,14 @@ export default function Footer() {
         <div className="grid lg:grid-cols-4 gap-10 mb-10">
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-11 h-11 rounded-full bg-gold-gradient flex items-center justify-center text-charcoal-950 font-black text-lg">
-                ☀
-              </div>
+              <Image
+                src="/logo.png"
+                alt="Continental Renewable Energy"
+                width={400}
+                height={266}
+                sizes="(max-width: 768px) 160px, 200px"
+                className="h-20 md:h-28 w-auto flex-shrink-0"
+              />
               <div>
                 <div className="font-display font-bold text-white">
                   {SITE.name}

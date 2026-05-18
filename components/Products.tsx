@@ -5,7 +5,14 @@ import { PRODUCTS, Product } from "@/lib/products";
 import { useCart } from "./CartContext";
 import { SITE } from "@/lib/site";
 
-const CATEGORIES = ["All", "Home System", "Estate System"] as const;
+const CATEGORIES = [
+  "All",
+  "Starter Home System",
+  "Family Comfort System",
+  "Premium Family System",
+  "Home System",
+  "Estate System",
+] as const;
 type Category = (typeof CATEGORIES)[number];
 
 export default function Products() {

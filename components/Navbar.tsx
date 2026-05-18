@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import { NAV, SITE } from "@/lib/site";
 import { useCart } from "./CartContext";
 
@@ -24,11 +25,17 @@ export default function Navbar({ onJoinPartner }: { onJoinPartner: () => void })
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between h-16 md:h-20">
+      <div className="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between h-24 md:h-28">
         <a href="#home" className="flex items-center gap-3 group">
-          <div className="w-10 h-10 md:w-11 md:h-11 rounded-full bg-gold-gradient flex items-center justify-center text-charcoal-950 font-black text-lg shadow-lg shadow-gold/20 group-hover:scale-105 transition">
-            ☀
-          </div>
+          <Image
+            src="/logo.png"
+            alt="Continental Renewable Energy"
+            width={400}
+            height={266}
+            priority
+            sizes="(max-width: 768px) 160px, 200px"
+            className="h-20 md:h-24 w-auto group-hover:scale-105 transition drop-shadow-[0_0_14px_rgba(212,175,55,0.45)]"
+          />
           <div className="hidden sm:block leading-tight">
             <div className="font-display font-bold text-base md:text-lg text-white">
               Continental
