@@ -25,14 +25,15 @@ export default function Products() {
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <div className="text-center mb-12">
           <span className="text-gold text-sm font-semibold tracking-widest uppercase">
-            Our Products
+            Energy Resilience · Residential Systems
           </span>
           <h2 className="section-title text-white">
-            Solar Solutions for <span className="text-gold-gradient">Every Home</span>
+            Reliable Power for <span className="text-gold-gradient">Every Home</span>
           </h2>
           <p className="section-subtitle">
-            From compact apartment kits to full commercial installations — every
-            system is delivered, installed and supported by our team.
+            Beyond enterprise infrastructure, CRE delivers turnkey solar, battery
+            and backup systems for homes and estates, designed, installed and
+            supported by our engineers.
           </p>
         </div>
 
@@ -66,7 +67,7 @@ function ProductCard({ product }: { product: Product }) {
   const { addToCart } = useCart();
 
   const orderViaWhatsApp = () => {
-    const message = `Hello ${SITE.name},\n\nI'd like to order:\n• ${product.name} — ${product.price}\n\nPlease confirm availability and arrange delivery/installation.`;
+    const message = `Hello ${SITE.name},\n\nI'd like to order:\n• ${product.name}, ${product.price}\n\nPlease confirm availability and arrange delivery/installation.`;
     const url = `https://wa.me/${SITE.whatsappNumber}?text=${encodeURIComponent(message)}`;
     window.open(url, "_blank");
   };

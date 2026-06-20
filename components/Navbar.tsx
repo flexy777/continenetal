@@ -2,13 +2,18 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { NAV, SITE } from "@/lib/site";
 import { useCart } from "./CartContext";
+import { useUI } from "./UIContext";
 
-export default function Navbar({ onJoinPartner }: { onJoinPartner: () => void }) {
+export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const { totalQuantity, openCart } = useCart();
+  const { openPartner } = useUI();
+  const pathname = usePathname();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -16,6 +21,9 @@ export default function Navbar({ onJoinPartner }: { onJoinPartner: () => void })
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  const isActive = (href: string) =>
+    href === "/" ? pathname === "/" : pathname.startsWith(href);
 
   return (
     <header
@@ -26,7 +34,7 @@ export default function Navbar({ onJoinPartner }: { onJoinPartner: () => void })
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between h-24 md:h-28">
-        <a href="#home" className="flex items-center gap-3 group">
+        <Link href="/" className="flex items-center gap-3 group">
           <Image
             src="/logo.png"
             alt="Continental Renewable Energy"
@@ -44,17 +52,21 @@ export default function Navbar({ onJoinPartner }: { onJoinPartner: () => void })
               Renewable Energy
             </div>
           </div>
-        </a>
+        </Link>
 
         <nav className="hidden lg:flex items-center gap-8">
           {NAV.map((n) => (
-            <a
+            <Link
               key={n.href}
               href={n.href}
-              className="text-charcoal-200 hover:text-gold text-sm font-medium transition-colors"
+              className={`text-sm font-medium transition-colors ${
+                isActive(n.href)
+                  ? "text-gold"
+                  : "text-charcoal-200 hover:text-gold"
+              }`}
             >
               {n.label}
-            </a>
+            </Link>
           ))}
         </nav>
 
@@ -89,7 +101,7 @@ export default function Navbar({ onJoinPartner }: { onJoinPartner: () => void })
           </button>
 
           <button
-            onClick={onJoinPartner}
+            onClick={openPartner}
             className="hidden md:inline-flex btn-gold !py-2 !px-4 text-sm"
           >
             Become a Partner
@@ -125,19 +137,21 @@ export default function Navbar({ onJoinPartner }: { onJoinPartner: () => void })
         <div className="lg:hidden bg-charcoal-950/95 backdrop-blur border-t border-charcoal-800">
           <div className="px-4 py-4 flex flex-col gap-1">
             {NAV.map((n) => (
-              <a
+              <Link
                 key={n.href}
                 href={n.href}
                 onClick={() => setOpen(false)}
-                className="px-3 py-3 rounded-md text-charcoal-100 hover:bg-charcoal-800 hover:text-gold"
+                className={`px-3 py-3 rounded-md hover:bg-charcoal-800 hover:text-gold ${
+                  isActive(n.href) ? "text-gold" : "text-charcoal-100"
+                }`}
               >
                 {n.label}
-              </a>
+              </Link>
             ))}
             <button
               onClick={() => {
                 setOpen(false);
-                onJoinPartner();
+                openPartner();
               }}
               className="btn-gold mt-2"
             >

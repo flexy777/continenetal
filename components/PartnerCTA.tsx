@@ -1,6 +1,9 @@
 "use client";
 
-export default function PartnerCTA({ onJoin }: { onJoin: () => void }) {
+import { useUI } from "./UIContext";
+
+export default function PartnerCTA() {
+  const { openPartner: onJoin } = useUI();
   return (
     <section
       id="partners"

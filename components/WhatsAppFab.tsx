@@ -2,7 +2,7 @@ import { SITE } from "@/lib/site";
 
 export default function WhatsAppFab() {
   const url = `https://wa.me/${SITE.whatsappNumber}?text=${encodeURIComponent(
-    `Hello ${SITE.name}, I'd like to know more about your solar systems.`,
+    `Hello ${SITE.name}, I'd like to know more about your infrastructure, security, and energy solutions.`,
   )}`;
   return (
     <a

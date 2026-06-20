@@ -1,5 +1,7 @@
 import Image from "next/image";
+import Link from "next/link";
 import { SITE, NAV } from "@/lib/site";
+import { SERVICE_AREAS } from "@/lib/content";
 
 export default function Footer() {
   return (
@@ -26,9 +28,9 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-sm text-charcoal-300 leading-relaxed max-w-md">
-              Reliable solar power systems, lithium batteries and inverters
-              installed and supported across Nigeria. Reduce your bills, end
-              the noise — own your power.
+              A Critical Infrastructure Resilience and Smart Security Solutions
+              company, securing the energy, security, and engineering systems
+              that power governments, industries, and institutions.
             </p>
           </div>
 
@@ -37,9 +39,9 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               {NAV.map((n) => (
                 <li key={n.href}>
-                  <a href={n.href} className="text-charcoal-300 hover:text-gold transition">
+                  <Link href={n.href} className="text-charcoal-300 hover:text-gold transition">
                     {n.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -63,12 +65,25 @@ export default function Footer() {
           </div>
         </div>
 
+        <div className="grid sm:grid-cols-3 gap-6 mb-10 pt-8 border-t border-charcoal-800">
+          {SERVICE_AREAS.map((s) => (
+            <Link
+              key={s.slug}
+              href={`/services#${s.slug}`}
+              className="text-sm text-charcoal-300 hover:text-gold transition flex items-start gap-2"
+            >
+              <span>{s.icon}</span>
+              <span>{s.title}</span>
+            </Link>
+          ))}
+        </div>
+
         <div className="pt-8 border-t border-charcoal-800 flex flex-col sm:flex-row justify-between items-center gap-4">
           <div className="text-xs text-charcoal-400">
             © {new Date().getFullYear()} {SITE.name}. All rights reserved.
           </div>
           <div className="text-xs text-charcoal-400">
-            Designed for Nigeria. Powered by the sun.
+            {SITE.tagline}
           </div>
         </div>
       </div>

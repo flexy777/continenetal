@@ -24,7 +24,7 @@ export default function CartDrawer() {
     const lines = items
       .map(
         (i, idx) =>
-          `${idx + 1}. ${i.product.name} × ${i.quantity} — ${i.product.price}`,
+          `${idx + 1}. ${i.product.name} × ${i.quantity}, ${i.product.price}`,
       )
       .join("\n");
 

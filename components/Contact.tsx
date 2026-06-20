@@ -17,18 +17,18 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 md:py-28 bg-charcoal-950">
+    <section id="contact" className="py-20 md:py-28 bg-charcoal-950 scroll-mt-24">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <div className="text-center mb-14">
           <span className="text-gold text-sm font-semibold tracking-widest uppercase">
             Get in Touch
           </span>
           <h2 className="section-title text-white">
-            Talk to a <span className="text-gold-gradient">Solar Engineer</span>
+            Talk to our <span className="text-gold-gradient">team</span>
           </h2>
           <p className="section-subtitle">
-            Free site survey for Lagos homes and businesses. Tell us what you
-            run and we&apos;ll size the right system for you.
+            Tell us about your infrastructure, security, and energy priorities,
+            we&apos;ll get back to you with the right next step.
           </p>
         </div>
 
@@ -71,7 +71,7 @@ export default function Contact() {
                 </svg>
               }
               title="Working Hours"
-              lines={["Mon – Sat: 8:00am – 6:00pm", "Sunday: Closed"]}
+              lines={["Mon to Sat: 8:00am to 6:00pm", "Sunday: Closed"]}
             />
           </div>
 

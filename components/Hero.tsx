@@ -1,8 +1,11 @@
 "use client";
 
-import { SITE } from "@/lib/site";
+import Link from "next/link";
+import { useUI } from "./UIContext";
 
-export default function Hero({ onJoinPartner }: { onJoinPartner: () => void }) {
+export default function Hero() {
+  const { openPartner } = useUI();
+
   return (
     <section
       id="home"
@@ -15,36 +18,37 @@ export default function Hero({ onJoinPartner }: { onJoinPartner: () => void }) {
         <div className="animate-slide-up">
           <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gold/10 border border-gold/30 text-gold text-xs font-semibold tracking-wider uppercase mb-5">
             <span className="w-2 h-2 rounded-full bg-gold animate-pulse" />
-            Powering Nigerian Homes
+            Critical Infrastructure Resilience &amp; Smart Security
           </span>
 
           <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] text-white mb-5">
-            Home Energy. <br />
-            <span className="text-gold-gradient">Sun Powered.</span>
+            Sun Powered. <br />
+            <span className="text-gold-gradient">Future Secured.</span>
           </h1>
 
           <p className="text-charcoal-200 text-base md:text-lg leading-relaxed max-w-xl mb-8">
-            {SITE.name} delivers premium solar systems, batteries and inverters
-            engineered for Nigeria&apos;s climate. End the noise of generators
-            and the pain of power cuts — for good.
+            Continental Renewable Energy secures the systems that power modern
+            society, integrating resilient energy infrastructure, intelligent
+            security, and advanced engineering for governments, industries, and
+            institutions.
           </p>
 
           <div className="flex flex-wrap gap-3 mb-10">
-            <a href="#products" className="btn-gold">
-              Shop Solar Systems
+            <Link href="/contact" className="btn-gold">
+              Request a Consultation
               <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14m-6-6l6 6-6 6" />
               </svg>
-            </a>
-            <button onClick={onJoinPartner} className="btn-outline-gold">
-              Join Partner Program
-            </button>
+            </Link>
+            <Link href="/services" className="btn-outline-gold">
+              Explore Our Services
+            </Link>
           </div>
 
           <div className="grid grid-cols-3 gap-4 max-w-md">
-            <Stat value="500+" label="Homes Powered" />
-            <Stat value="25yr" label="Panel Warranty" />
-            <Stat value="24/7" label="Support" />
+            <Stat value="3" label="Solution Pillars" />
+            <Stat value="8+" label="Industries Served" />
+            <Stat value="24/7" label="Monitoring & Support" />
           </div>
         </div>
 
@@ -55,20 +59,20 @@ export default function Hero({ onJoinPartner }: { onJoinPartner: () => void }) {
               <div className="absolute -top-20 -right-20 w-60 h-60 bg-gold-gradient rounded-full opacity-30 blur-2xl" />
 
               <div className="relative text-center">
-                <div className="text-7xl md:text-8xl mb-2">☀️</div>
+                <div className="text-7xl md:text-8xl mb-2">🛡️</div>
                 <div className="font-display text-2xl md:text-3xl font-bold text-white mb-1">
-                  Always-On Power
+                  Resilient by Design
                 </div>
                 <div className="text-gold text-sm tracking-widest uppercase">
-                  From sunrise to next sunrise
+                  Energy · Security · Engineering
                 </div>
               </div>
 
               <div className="relative grid grid-cols-2 gap-3 mt-8 w-full">
-                <Feature icon="🔋" label="Lithium Backup" />
-                <Feature icon="📱" label="Smart Monitoring" />
-                <Feature icon="🛡️" label="2-Year Service" />
-                <Feature icon="🇳🇬" label="Nationwide" />
+                <Feature icon="⚡" label="Energy Resilience" />
+                <Feature icon="📹" label="Smart Security" />
+                <Feature icon="🔋" label="Storage & BESS" />
+                <Feature icon="🧠" label="Tech Advisory" />
               </div>
             </div>
           </div>
