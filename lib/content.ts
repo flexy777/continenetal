@@ -36,9 +36,9 @@ export const ABOUT = {
 };
 
 export const LEADERSHIP = {
-  name: "Dr. Odunmboku-Wilson",
+  name: "Dr. Odunmbaku-Wilson",
   role: "Founder & Chief Executive",
-  bio: "CRE is led by Dr. Odunmboku-Wilson, an Ivy League-trained engineer and seasoned executive with a proven record of leadership across government, academia, and industry. Leveraging expertise in engineering, data analytics, strategy, and policy, he brings a unique ability to align technology, infrastructure, and institutional priorities to deliver sustainable, high-impact solutions. His leadership reflects CRE's commitment to innovation, resilience, and excellence.",
+  bio: "CRE is led by Dr. Odunmbaku-Wilson, an Ivy League-trained engineer and seasoned executive with a proven record of leadership across government, academia, and industry. Leveraging expertise in engineering, data analytics, strategy, and policy, he brings a unique ability to align technology, infrastructure, and institutional priorities to deliver sustainable, high-impact solutions. His leadership reflects CRE's commitment to innovation, resilience, and excellence.",
 };
 
 export type ServiceArea = {
