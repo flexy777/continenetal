@@ -4,7 +4,7 @@ export const SITE = {
   tagline: "Sun Powered. Future Secured.",
   descriptor:
     "Critical Infrastructure Resilience & Smart Security Solutions",
-  url: "https://continenetal.vercel.app",
+  url: "https://www.continentalrenewables.com",
   address: "31B Oyeleke St., Alausa CBD, Ikeja, Lagos",
   phone: "+2348147587048",
   phoneRaw: "2348147587048",
