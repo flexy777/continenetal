@@ -16,7 +16,7 @@ export const PRODUCTS: Product[] = [
     category: "Starter Home System",
     description:
       "For first-time solar buyers who want reliable power and a refrigerator without generator stress. Your first step into better living, lights, fan, TV, cold drinks, and peaceful nights, all on a smart budget.",
-    price: "₦2,200,000",
+    price: "₦2,950,000",
     badge: "Best for Apartments & Small Homes",
     icon: "🏠",
     features: [
@@ -26,6 +26,7 @@ export const PRODUCTS: Product[] = [
       "Powers fridge, TV, fans, and lights",
       "Water pump ready",
       "Same-day installation by certified CRE technicians",
+      "3-year warranty",
     ],
   },
 
@@ -35,7 +36,7 @@ export const PRODUCTS: Product[] = [
     category: "Family Comfort System",
     description:
       "For families upgrading from basic survival to real comfort living. One bedroom AC, fridge running 24/7, children studying at night in a quiet modern home, affordable luxury starts here.",
-    price: "₦3,200,000",
+    price: "₦4,900,000",
     badge: "Best for Growing Families",
     icon: "❄️",
     features: [
@@ -45,25 +46,7 @@ export const PRODUCTS: Product[] = [
       "Powers fridge, TV, fans, lights, and 1HP AC",
       "Water pump ready",
       "Same-day installation by certified CRE technicians",
-    ],
-  },
-
-  {
-    id: "cre-familycomfort-max",
-    name: "CRE FamilyComfort Max™",
-    category: "Premium Family System",
-    description:
-      "For ambitious families wanting premium comfort without diesel expenses. Two AC bedrooms, stable refrigeration, and full entertainment, middle-class dream living made real without fuel stress.",
-    price: "₦4,700,000",
-    badge: "Best for 3 to 4 Bedroom Homes",
-    icon: "🏘️",
-    features: [
-      "7.5KVA Hybrid Inverter",
-      "5KW Solar Panels",
-      "48V 200Ah Lithium Battery",
-      "Powers fridge, TVs, fans, lights, and 1 to 2 × 1HP ACs",
-      "Water pump ready",
-      "Same-day installation by certified CRE technicians",
+      "3-year warranty",
     ],
   },
 
@@ -83,6 +66,7 @@ export const PRODUCTS: Product[] = [
       "11.9 kWh/day system capacity",
       "Same-day installation by certified CRE technicians",
       "Finance available, lease-to-own via partners",
+      "15-year warranty",
     ],
   },
 
@@ -102,6 +86,7 @@ export const PRODUCTS: Product[] = [
       "20.2 kWh/day system capacity",
       "Same-day installation by certified CRE technicians",
       "Finance available, lease-to-own via partners",
+      "15-year warranty",
     ],
   },
 
@@ -121,6 +106,7 @@ export const PRODUCTS: Product[] = [
       "35.8 kWh/day system capacity",
       "Real-time monitoring via Rhizome WiFi app",
       "Finance available, lease-to-own via partners",
+      "15-year warranty",
     ],
   },
 
@@ -140,6 +126,7 @@ export const PRODUCTS: Product[] = [
       "55.2 kWh/day system capacity",
       "Remote monitoring app included",
       "Finance available, lease-to-own via partners",
+      "15-year warranty",
     ],
   },
 
@@ -159,6 +146,7 @@ export const PRODUCTS: Product[] = [
       "117.2 kWh/day system capacity",
       "Supports borehole pump, clothes dryer, dishwasher, electric oven",
       "Finance available, lease-to-own via partners",
+      "15-year warranty",
     ],
   },
 ]

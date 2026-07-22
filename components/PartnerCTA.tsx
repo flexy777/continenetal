@@ -32,7 +32,7 @@ export default function PartnerCTA() {
 
               <ul className="grid sm:grid-cols-2 gap-3 mb-8">
                 {[
-                  "Tiered margins up to 22%",
+                  "Tiered margins up to 10%",
                   "Co-branded marketing kits",
                   "Free technical training",
                   "Lead routing in your LGA",
@@ -56,10 +56,10 @@ export default function PartnerCTA() {
 
             <div className="lg:col-span-2">
               <div className="grid grid-cols-2 gap-4">
-                <TierBadge name="Bronze" margin="10%" />
-                <TierBadge name="Silver" margin="14%" />
-                <TierBadge name="Gold" margin="18%" highlight />
-                <TierBadge name="Platinum" margin="22%" />
+                <TierBadge name="Bronze" margin="3%" />
+                <TierBadge name="Silver" margin="5%" />
+                <TierBadge name="Gold" margin="7.5%" highlight />
+                <TierBadge name="Platinum" margin="10%" />
               </div>
             </div>
           </div>

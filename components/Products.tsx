@@ -9,7 +9,6 @@ const CATEGORIES = [
   "All",
   "Starter Home System",
   "Family Comfort System",
-  "Premium Family System",
   "Home System",
   "Estate System",
 ] as const;
