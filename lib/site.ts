@@ -8,7 +8,7 @@ export const SITE = {
   address: "31B Oyeleke St., Alausa CBD, Ikeja, Lagos",
   phone: "+2348147587048",
   phoneRaw: "2348147587048",
-  email: "con4energy@gmail.com",
+  email: "info@continentalrenewables.com",
   whatsappNumber: "2348147587048",
 };
 
